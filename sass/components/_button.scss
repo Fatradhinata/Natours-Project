@@ -16,15 +16,31 @@
         background-color: $color-white;
         color: $color-grey-dark;
 
+        &:hover {
+            background-color: $color-white !important;
+        }
+        
         &::after {
             background-color: $color-white;
+        }
+    }
+    
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &:hover {
+            background-color: $color-primary !important;
+        }
+
+        &::after {
+            background-color: $color-primary;
         }
     }
     
     &:hover {
         transform: translateY(-3px);
         box-shadow: 0 1rem 2rem rgba($color-black, .2);
-        background-color: $color-white !important;
 
         &::after {
             transform: scaleX(1.4) scaleY(1.6);
