@@ -5,6 +5,15 @@
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+
+        @include respond(lg) {
+            margin-bottom: $gutter-vertical-small;
+        }
+    }
+
+    @include respond(lg) {
+        max-width: 50rem;
+        padding: 0 3rem;
     }
 
     @include clearfix;
@@ -14,7 +23,15 @@
         float: left;
     
         &:not(:last-child) {
-            margin-right: $gutter-horizontal;
+            margin-right: $gutter-horizontal;            
+            @include respond(lg) {
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
+
+        @include respond(lg) {
+            width: 100% !important;
         }
     }
 

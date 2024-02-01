@@ -4,7 +4,6 @@ body {
     font-size: 1.6rem;
     line-height: 1.7;
     color: $color-grey-dark;
-    padding: 3rem;
 }
 
 .heading-primary {
@@ -23,6 +22,16 @@ body {
         /* text-align: center; */
         
         animation: moveInLeft 1.5s ease-in-out; 
+
+        @include respond(md) {
+            letter-spacing: 2rem;
+            font-size: 5.5rem;
+        }
+
+        @include respond(sm) {
+            letter-spacing: .8rem;
+            font-size: 4rem;
+        }
     }
     
     &--sub {
@@ -31,9 +40,17 @@ body {
         font-weight: 700;
         letter-spacing: 1.5rem;
         line-height: 1.5 !important;
-        /* text-align: center; */
-    
         animation: moveInRight 1.5s ease-in-out;
+
+        @include respond(md) {
+            font-size: 1.7rem;
+            letter-spacing: .5rem;
+        }
+
+        @include respond(sm) {
+            font-size: 1.4rem;
+            letter-spacing: .5rem;
+        }
     }
 }
 
@@ -47,6 +64,14 @@ body {
     color: transparent;
     letter-spacing: .2rem;
     transition: all .2s;
+
+    @include respond(lg) {
+        font-size: 3rem;
+    }
+
+    @include respond(sm) {
+        font-size: 2.5rem;
+    }
 
     &:hover {
         transform: skewY(2deg) skewX(15deg) scale(1.1);

@@ -6,3 +6,35 @@
 
         }
 }
+
+@mixin absCenter {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+
+// MEDIA QUERY MANAGER
+
+/*
+
+
+*/
+
+@mixin respond($breakpoint) {
+        @if $breakpoint == sm {
+                @media only screen and (max-width: $sm) { @content};
+        }
+        @if $breakpoint == md {
+                @media only screen and (max-width: $md) { @content};
+        }
+        @if $breakpoint == lg {
+                @media only screen and (max-width: $lg) { @content};
+        }
+        @if $breakpoint == xl {
+                @media only screen and (max-width: $xl) { @content};
+        }
+        @if $breakpoint == xxl {
+                @media only screen and (min-width: $xxl) { @content};
+        }
+}

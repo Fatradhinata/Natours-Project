@@ -7,9 +7,36 @@
 }
 
 html {
-    font-size: 62.5%
+    font-size: 62.5%;
+
+    @include respond(lg) {
+        font-size: 60%; // 1rem = 9.6px
+    }
+    @include respond(md) {
+        font-size: 56%; // 1rem = 8.96px
+    }
+    @include respond(sm) {
+        font-size: 50%; // 1rem = 8px
+    }
+    // @include respond(xs) {
+    //     font-size: 45%; // 1rem = 7.2px
+    // }
+    // @include respond(xs) {
+        //     font-size: 45%; // 1rem = 7.2px
+        // }
+        
+    }
+    
+    body {
+        box-sizing: border-box;
+        padding: 3rem;
+
+        @include respond(lg) {
+            padding: 0;
+        }
 }
 
-body {
-    box-sizing: border-box;
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
 }
